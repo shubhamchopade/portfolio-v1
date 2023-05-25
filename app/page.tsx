@@ -1,17 +1,18 @@
-import { allPosts } from "@/.contentlayer/generated"
-import Link from "next/link"
+import { allPosts } from "@/.contentlayer/generated";
+import Education from "@/components/education";
+import Experience from "@/components/experience";
+import Landing from "@/components/landing";
+import Pomodoro from "@/components/pomodoro";
+import Projects from "@/components/projects";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="prose dark:prose-invert">
-      {allPosts.map((post) => (
-        <article key={post._id}>
-          <Link href={post.slug}>
-            <h2>{post.title}</h2>
-          </Link>
-          {post.description && <p>{post.description}</p>}
-        </article>
-      ))}
+    <div className="">
+      <Landing />
+      <Education />
+      <Experience />
+      <Projects />
     </div>
-  )
+  );
 }
