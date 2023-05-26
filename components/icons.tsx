@@ -1,11 +1,16 @@
 import {
   AlignStartHorizontal,
+  DownloadIcon,
+  GithubIcon,
+  LinkedinIcon,
   ListStartIcon,
   LucideStopCircle,
   Play,
   RotateCcw,
+  SendIcon,
   Square,
   StopCircle,
+  TwitterIcon,
 } from "lucide-react";
 
 export const TimerIcon = (props: any) => (
@@ -32,4 +37,9 @@ export const Icons = {
   start: Play,
   stop: Square,
   reset: RotateCcw,
+  linkedin: LinkedinIcon,
+  github: GithubIcon,
+  twitter: TwitterIcon,
+  download: DownloadIcon,
+  send: SendIcon,
 };

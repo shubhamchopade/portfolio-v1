@@ -6,6 +6,9 @@ export const info = {
   siteKeywords:
     "Shubham Chopade, Shubham, Chopade, shubhamchopade, shubhamchopade, software developer",
   siteLanguage: "en_US",
+  twitter: "https://twitter.com/chopadehsubham4",
+  github: "https://github.com/shubhamchopade",
+  linkedin: "https://linkedin.com/in/shubham-chopade",
 };
 
 export const education = [
@@ -86,7 +89,7 @@ export const projects = [
     title: "Reactly - Host your React App in 3 steps",
     description:
       "Reactly is a CLI tool that helps you to host your React App in 3 steps. It is a simple and easy to use tool that helps you to host your React App on Github Pages, Netlify, and Vercel.",
-    image: "/reactly-logo.png",
+    image: "/projects/decoderspace.png",
     startDate: "May 2023",
     endDate: "August 2022",
     link: "https://www.reactly.app/",
@@ -97,7 +100,7 @@ export const projects = [
     title: "Mutualism - Agent-based modeling for Yeast",
     description:
       "Designed and developed a distributed systems-based simulator to study the behavior of Yeast in diverse environmental conditions, such as varying levels of Glucose and Lysine. This educational product is specifically aimed at teaching microbiology concepts to school-going children, providing an interactive and engaging learning experience.",
-    image: "/mutualism-logo.png",
+    image: "/projects/mutualismsimulator.png",
     startDate: "May 2023",
     endDate: "August 2022",
     link: "https://www.mutualismsimulator.org/",
@@ -108,7 +111,7 @@ export const projects = [
     title: "Decoder Space - Verilog Coding Practice",
     description:
       "The Digital Electronics Coder Space is a dedicated platform designed to help individuals practice and enhance their Verilog coding skills specifically for interviews. With a focus on digital electronics, users can access a range of resources and exercises to master Verilog coding techniques, preparing them for success in technical interviews.",
-    image: "/decoder-space-logo.png",
+    image: "/projects/decoderspace.png",
     startDate: "February 2023",
     endDate: "On Going",
     link: "https://www.decoderspace.com/",
@@ -118,7 +121,7 @@ export const projects = [
     title: "The Book Pundits - Connecting Authors & Influencers",
     description:
       "Book Pundits is a Book Campaign Platform. Their motto is to connect Authors with their niche readers and reliable authentic influencers.",
-    image: "/grouped-logo.webp",
+    image: "/projects/thebookpundits.png",
     startDate: "December 2020",
     endDate: "January 2021",
     link: "https://www.thebookpundits.com/",
@@ -128,7 +131,7 @@ export const projects = [
     title: "Tailwind CSS Gradients",
     description:
       "A collection of 180+ gradients for Tailwind CSS. The gradients are generated using the Tailwind CSS color palette.",
-    image: "/tailwindcss-gradients-logo.png",
+    image: "/projects/tailwind-v2.png",
     startDate: "December 2020",
     endDate: "January 2021",
     link: "https://github.com/shubhamchopade/tailwind-gradient",
@@ -138,7 +141,7 @@ export const projects = [
     title: "Tailwind CSS Gradients 2.0",
     description:
       "A collection of 180+ gradients for Tailwind CSS. The gradients are generated using the Tailwind CSS color palette.",
-    image: "/tailwindcss-gradients-logo.png",
+    image: "/projects/tailwind-v2.png",
     startDate: "December 2020",
     endDate: "January 2021",
     link: "https://github.com/shubhamchopade/tailwind-gradient-v2",
@@ -148,7 +151,7 @@ export const projects = [
     title: "Techsapien - Opensource Tech Blog",
     description:
       "Techsapien is a tech blog where I write about the latest technologies and my experiences with them.",
-    image: "/techsapien-logo.jpeg",
+    image: "/projects/techsapien.png",
     startDate: "December 2020",
     endDate: "January 2021",
     link: "https://www.techsapien.dev/",

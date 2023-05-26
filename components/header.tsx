@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useWindowScroll } from "@/hooks/use-window-scroll";
 import { TimerIcon } from "./icons";
 import Pomodoro from "./pomodoro";
+import Socials from "./ui/socials";
 
 const Header = () => {
   const [scroll, scrollTo] = useWindowScroll();
@@ -30,6 +31,7 @@ const Header = () => {
             <ModeToggle />
             <Pomodoro />
           </div>
+          <Socials />
           <nav className="ml-8 text-sm font-medium space-x-6">
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>

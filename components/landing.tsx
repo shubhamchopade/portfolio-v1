@@ -1,40 +1,39 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
+import { Icons } from "./icons";
+import { Input } from "@/src/components/ui/input";
+import { Label } from "@/src/components/ui/label";
 
 const Landing = () => {
   return (
-    <div className="lg:flex items-center justify-between">
+    <div className="">
       {/* Basic Description */}
-      <div className="prose dark:prose-invert">
-        <h1 className="">
+      <div className="w-full text-center h-96 grid place-content-center">
+        <h1 className="text-6xl font-black">
           Hi, I am <span className="text-blue-500">Shubham</span>
         </h1>
-        <p>
-          I am a software engineer based in New York. I am a full stack
-          developer with experience in building web applications using React,
-          Node, Express, MongoDB and other technologies.
+        <p className="text-base mt-4">
+          a software engineer based in New York experienced in building web
+          applications, mobile applications and backend services.
         </p>
-        <div className="flex justify-between max-w-sm mt-4">
-          <a href="https://linkedin.com/in/shubham-chopade">Linkedin</a>
-          <a href="https://github.com/shubhamchopade">Github</a>
-          <a href="https://twitter.com/chopadehsubham4">Twitter</a>
-        </div>
 
-        <div className="flex mt-8">
-          <Button className="">Contact me</Button>
+        <div className="mt-8 max-w-sm mx-auto relative group">
+          <div className="flex  ">
+            <Input
+              className=""
+              name="note"
+              placeholder="Hi shubham, this is ..."
+            />
+            <Button className="ml-4">
+              Send{" "}
+              <Icons.send className="w-4 h-4 ml-4 transition-transform group-hover:rotate-45" />
+            </Button>
+          </div>
+          <p className="absolute -bottom-16 sm:-left-40 -left-16 rotate-3 font-serif transition-transform group-hover:text-pink-500 group-hover:rotate-12">
+            Send me a direct message
+          </p>
         </div>
-      </div>
-
-      {/* Cover Photo */}
-      <div className="mt-8">
-        <Image
-          className="object-cover md:w-3/4 w-full mx-auto"
-          alt="Portfolio Cover Photo"
-          src="/shubham-graduation.jpg"
-          width={1000}
-          height={1000}
-        />
       </div>
     </div>
   );

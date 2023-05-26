@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <div className="">
       <Landing />
+      <Projects />
       <Education />
       <Experience />
-      <Projects />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@/components/analytics";
 import { ModeToggle } from "@/components/mode-toggle";
 import Header from "@/components/header";
+import Breakpoint from "@/components/ui/breakpoint";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,11 +24,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
+        <script
+          async
+          src="https://analytics.umami.is/script.js"
+          data-website-id="66f042aa-ecb7-4ce8-bb2a-1e84afbd82bd"
+        ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="container mx-auto">
             <Header />
             <main>{children}</main>
           </div>
+          <Breakpoint />
           <Analytics />
         </ThemeProvider>
       </body>
