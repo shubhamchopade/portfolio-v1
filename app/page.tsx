@@ -4,6 +4,7 @@ import Experience from "@/components/experience";
 import Landing from "@/components/landing";
 import Pomodoro from "@/components/pomodoro";
 import Projects from "@/components/projects";
+import Timeline from "@/components/timeline";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Projects />
       <Education />
       <Experience />
+      <Timeline />
     </div>
   );
 }

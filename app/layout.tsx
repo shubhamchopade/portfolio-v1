@@ -6,6 +6,7 @@ import { Analytics } from "@/components/analytics";
 import { ModeToggle } from "@/components/mode-toggle";
 import Header from "@/components/header";
 import Breakpoint from "@/components/ui/breakpoint";
+import Banner from "@/components/ui/banner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,11 +31,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           data-website-id="66f042aa-ecb7-4ce8-bb2a-1e84afbd82bd"
         ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="container mx-auto">
+          <Banner />
+          <div className="">
             <Header />
             <main>{children}</main>
           </div>
-          <Breakpoint />
           <Analytics />
         </ThemeProvider>
       </body>

@@ -1,0 +1,73 @@
+---
+title: Sorting an array of objects
+description: How to sort an array of objects based on a key in Javascript
+date: "2023-04-25"
+---
+
+### Introduction
+
+When it comes to working with arrays in programming, sorting is a common operation that is often required. Sorting an array of primitive values like numbers or strings is relatively straightforward, but sorting an array of objects can be a little more complex. In this blog post, we will look at how to sort an array of objects based on a key in JavaScript.
+
+### Sorting an Array of Objects
+
+Assuming we have an array of objects, the first step in sorting is to determine which key we want to use as the basis for the sorting. For example, let’s say we have an array of objects representing people with their first and last names and we want to sort the array based on their last names. To do this, we can use the `sort()` method available on arrays in JavaScript.
+
+The `sort()` method takes a function as an argument that defines the sorting behavior. The function should take two parameters, which represent two elements of the array being compared. The function should return a value that indicates which of the two elements should come first in the sorted array.
+
+Here’s an example code snippet that demonstrates sorting an array of objects based on a key:
+
+```js
+const people = [
+  { firstName: "John", lastName: "Doe" },
+  { firstName: "Jane", lastName: "Doe" },
+  { firstName: "Adam", lastName: "Smith" },
+  { firstName: "Eve", lastName: "Johnson" },
+];
+
+people.sort((a, b) => (a.lastName > b.lastName ? 1 : -1));
+console.log(people);
+```
+
+In this example, we first define an array of people with their first and last names. We then use the `sort()` method to sort the array based on the `lastName` key. The sorting function compares the `lastName` property of each object and returns either 1 or -1 depending on which should come first in the sorted array.
+
+The resulting output of the code snippet will be:
+
+```
+[
+  { firstName: 'John', lastName: 'Doe' },
+  { firstName: 'Jane', lastName: 'Doe' },
+  { firstName: 'Eve', lastName: 'Johnson' },
+  { firstName: 'Adam', lastName: 'Smith' }
+]
+```
+
+### Sorting in Reverse Order
+
+By default, the `sort()` method sorts an array in ascending order. To sort an array in descending order, we can simply reverse the order of the comparison in our sorting function. Here's an example code snippet that demonstrates sorting an array of objects in reverse order based on a key:
+
+```
+const people = [
+  { firstName: 'John', lastName: 'Doe' },
+  { firstName: 'Jane', lastName: 'Doe' },
+  { firstName: 'Adam', lastName: 'Smith' },
+  { firstName: 'Eve', lastName: 'Johnson' }
+];
+
+people.sort((a, b) => (a.lastName < b.lastName) ? 1 : -1);
+console.log(people);
+```
+
+In this example, we use the same array of people and the `sort()` method, but this time we reverse the order of the comparison in the sorting function. The resulting output will be:
+
+```
+[
+  { firstName: 'Adam', lastName: 'Smith' },
+  { firstName: 'Eve', lastName: 'Johnson' },
+  { firstName: 'John', lastName: 'Doe' },
+  { firstName: 'Jane', lastName: 'Doe' }
+]
+```
+
+### Conclusion
+
+Sorting an array of objects based on a key in JavaScript can be a little tricky, but it’s an essential skill for any programmer working with arrays of data. By using the `sort()` method and defining a sorting function that compares the desired key of each object, we can easily sort an array of objects in either ascending or descending order.

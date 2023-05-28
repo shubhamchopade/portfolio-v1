@@ -7,7 +7,7 @@ const Socials = () => {
   return (
     <div className="flex items-center justify-between max-w-sm">
       <a className="ml-6 w-4 h-4" href={info.linkedin}>
-        <Icons.linkedin />
+        <Icons.linkedin className="h-5 w-5" />
       </a>
       <a className="ml-6 w-4 h-4" href={info.github}>
         <Icons.github />

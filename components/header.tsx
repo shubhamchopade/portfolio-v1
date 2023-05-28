@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="my-8">
+      <header className="my-4">
         <div
           className={`transition-opacity flex items-center justify-between px-4 ${
             isScrolled && "opacity-0"
