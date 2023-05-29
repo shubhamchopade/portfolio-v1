@@ -8,7 +8,9 @@ export function useWindowEvent<K extends string>(
   options?: boolean | AddEventListenerOptions
 ) {
   useEffect(() => {
+    // @ts-ignore
     window.addEventListener(type, listener, options);
+    // @ts-ignore
     return () => window.removeEventListener(type, listener, options);
   }, [type, listener]);
 }

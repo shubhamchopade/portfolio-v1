@@ -6,7 +6,7 @@ const Timeline = () => {
     <div className="mt-16 max-w-2xl mx-auto relative -z-10">
       <p className="text-2xl mb-8">Timeline</p>
       <div className="max-w-2xl ml-44">
-        {sortedTimeline.map((item, index) => (
+        {sortedTimeline.map((item: any, index) => (
           <div className="flex items-start justify-between mx-2 mt-4 mb-12 group">
             <div className="absolute left-0">
               <p className="text-xs uppercase font-serif text-right mb-2">

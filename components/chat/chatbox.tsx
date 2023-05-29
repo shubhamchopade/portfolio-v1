@@ -11,13 +11,14 @@ import { Icons } from "../icons";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import useSWR from "swr";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+// @ts-ignore
+const fetcher = (...args: any[]) => fetch(...args).then((res) => res.json());
 
 const botId = "b54228c8-36c2-4da1-9f8e-21880bea0539";
 
 const Chatbox = () => {
   const [content, setContent] = React.useState("");
-  const [messages, setMessages] = React.useState([]);
+  const [messages, setMessages] = React.useState<any>([]);
   const [uuid, setUuid] = React.useState(
     `${Math.random().toString(36).substring(2, 15)}`
   );
@@ -42,6 +43,7 @@ const Chatbox = () => {
 
   useEffect(() => {
     if (data) {
+      // @ts-ignore
       const _messages = data.results.map((message) => {
         if (message.created_by.id === botId) {
           return { ...message, userType: "bot" };
@@ -76,6 +78,7 @@ const Chatbox = () => {
   };
 
   //   Send message to database
+  //   @ts-ignore
   const sendMessage = async (_chatId) => {
     const sendMessage = await fetch("/api/chat/send", {
       method: "POST",
@@ -128,7 +131,7 @@ const Chatbox = () => {
       <div className="mt-8 max-w-sm mx-auto relative group">
         <ScrollArea className="h-72 max-w-xl rounded-md border">
           <div className="p-4">
-            {messages.map((message) => (
+            {messages.map((message: any) => (
               <div className="my-4">
                 <p
                   className={
