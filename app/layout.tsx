@@ -7,6 +7,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import Header from "@/components/header";
 import Breakpoint from "@/components/ui/breakpoint";
 import Banner from "@/components/ui/banner";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="">
             <Header />
             <main>{children}</main>
+            <Toaster />
           </div>
           <Analytics />
         </ThemeProvider>

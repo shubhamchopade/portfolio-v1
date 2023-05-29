@@ -9,7 +9,7 @@ import Socials from "./ui/socials";
 
 const Header = () => {
   const [scroll, scrollTo] = useWindowScroll();
-  const isScrolled = scroll.y > 0;
+  const isScrolled = scroll.y > 50;
   const [dots, setDots] = React.useState(0);
 
   useEffect(() => {
@@ -41,8 +41,8 @@ const Header = () => {
 
         {/* init */}
         <div
-          className={`fixed inset-x-0 bottom-8 flex items-center justify-between bg-white rounded-full bg-opacity-10 backdrop-blur-sm transition-transform ${
-            isScrolled ? "max-w-xs" : "w-40"
+          className={`fixed z-40 inset-x-0 bottom-8 flex items-center justify-between bg-white rounded-full bg-opacity-10 backdrop-blur-sm transition-transform ${
+            isScrolled ? "max-w-xs" : "w-40 hidden"
           } mx-auto px-8 py-4 `}
         >
           <nav className={``}>
