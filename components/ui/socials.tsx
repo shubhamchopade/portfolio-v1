@@ -5,7 +5,7 @@ import { info } from "@/constants/site";
 
 const Socials = () => {
   return (
-    <div className="flex items-center justify-between max-w-sm">
+    <div className="flex items-center justify-center max-w-xs mx-auto mt-4">
       <a className="ml-6 w-4 h-4" href={info.linkedin}>
         <Icons.linkedin className="h-5 w-5" />
       </a>
@@ -15,12 +15,12 @@ const Socials = () => {
       <a className="ml-6 w-4 h-4" href={info.twitter}>
         <Icons.twitter />
       </a>
-      <Button variant={"outline"} className="ml-6 ">
+      {/* <Button variant={"outline"} className="ml-6 ">
         <Icons.download
           data-umami-event="resume-download"
           className="h-4 w-4"
         />
-      </Button>
+      </Button> */}
     </div>
   );
 };
