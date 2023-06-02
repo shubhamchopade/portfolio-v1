@@ -1,15 +1,18 @@
 import {
   AlignStartHorizontal,
   DownloadIcon,
+  EyeIcon,
   GithubIcon,
   LinkedinIcon,
   ListStartIcon,
   LucideStopCircle,
+  MoonIcon,
   Play,
   RotateCcw,
   SendIcon,
   Square,
   StopCircle,
+  SunIcon,
   TwitterIcon,
 } from "lucide-react";
 
@@ -42,4 +45,7 @@ export const Icons = {
   twitter: TwitterIcon,
   download: DownloadIcon,
   send: SendIcon,
+  moon: MoonIcon,
+  sun: SunIcon,
+  eye: EyeIcon,
 };

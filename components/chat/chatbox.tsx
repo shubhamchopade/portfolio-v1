@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { use, useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 import { info } from "@/constants/site";
 import { useToast } from "../ui/use-toast";
@@ -17,13 +17,13 @@ const fetcher = (...args: any[]) => fetch(...args).then((res) => res.json());
 const botId = process.env.NEXT_PUBLIC_BOTID;
 
 const Chatbox = () => {
-  const [content, setContent] = React.useState("");
-  const [messages, setMessages] = React.useState<any>([]);
-  const [uuid, setUuid] = React.useState(
+  const [content, setContent] = useState("");
+  const [messages, setMessages] = useState<any>([]);
+  const [uuid, setUuid] = useState(
     `${Math.random().toString(36).substring(2, 15)}`
   );
-  const [userMessages, setUserMessages] = React.useState([]);
-  const [chatId, setChatId] = React.useState("");
+  const [userMessages, setUserMessages] = useState([]);
+  const [chatId, setChatId] = useState("");
   const { toast } = useToast();
 
   useEffect(() => {

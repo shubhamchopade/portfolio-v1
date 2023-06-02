@@ -3,6 +3,7 @@ import { allPosts } from "contentlayer/generated";
 
 import { Metadata } from "next";
 import { Mdx } from "@/components/mdx-components";
+import Umami from "@/components/tracking/umami";
 
 interface PostProps {
   params: {
@@ -54,6 +55,8 @@ export default async function PostPage({ params }: PostProps) {
   }
   const minsRead = Math.ceil(post.body.code.split(" ").length / 400);
 
+  const slug = params?.slug?.join("/");
+
   return (
     <article className="mb-12 prose dark:prose-invert">
       <h1 className="mb-2">{post.title}</h1>
@@ -69,6 +72,7 @@ export default async function PostPage({ params }: PostProps) {
         </span>
       </span>
 
+      <Umami path={`/posts/${slug}`} />
       <hr className="my-4" />
       <Mdx code={post.body.code} />
     </article>
