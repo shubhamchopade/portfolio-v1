@@ -14,7 +14,7 @@ import useSWR from "swr";
 // @ts-ignore
 const fetcher = (...args: any[]) => fetch(...args).then((res) => res.json());
 
-const botId = "b54228c8-36c2-4da1-9f8e-21880bea0539";
+const botId = process.env.NEXT_PUBLIC_BOTID;
 
 const Chatbox = () => {
   const [content, setContent] = React.useState("");
@@ -33,7 +33,7 @@ const Chatbox = () => {
     }
   }, [userMessages]);
 
-  const { data, error, isLoading, mutate } = useSWR(
+  const { data, mutate } = useSWR(
     chatId ? `/api/chat?block_id=${chatId}` : null,
     fetcher,
     {
@@ -132,10 +132,12 @@ const Chatbox = () => {
         <ScrollArea className="h-72 max-w-xl rounded-md border">
           <div className="p-4">
             {messages.map((message: any) => (
-              <div className="my-4">
+              <div key={message.id} className="my-4">
                 <p
                   className={
-                    message?.userType === "user" ? "text-left" : "text-right"
+                    message?.userType === "user"
+                      ? "text-left text-orange-600"
+                      : "text-right text-purple-600"
                   }
                 >
                   {message?.userType === "user" ? "Shubham" : "You"}
@@ -145,12 +147,12 @@ const Chatbox = () => {
                     message?.userType === "user" ? "mr-auto" : "ml-auto"
                   } w-max`}
                 >
-                  <span
-                    className={`px-4 py-2 text-left rounded-md bg-secondary`}
+                  <p
+                    className={`px-4 py-2 text-left max-w-xs rounded-md bg-secondary`}
                     key={message.id}
                   >
                     {message?.rich_text[0]?.plain_text}
-                  </span>
+                  </p>
                 </div>
               </div>
             ))}

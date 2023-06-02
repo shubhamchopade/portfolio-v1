@@ -5,14 +5,14 @@ import { experience } from "@/constants/site";
 
 const Experience = () => {
   return (
-    <div className="mt-16 max-w-2xl mx-auto">
+    <div className="mt-16 max-w-2xl px-1 mx-auto">
       <p className="text-2xl my-8">Experience</p>
       <div className="max-w-2xl mx-auto">
         {experience.map((exp) => (
           <div className="flex items-start justify-between mx-2 my-8 group">
             <section className="flex">
               <Image
-                className="object-cover"
+                className="w-10 h-12 sm:w-8 sm:h-12 object-cover"
                 alt="Organization Logo"
                 width={40}
                 height={40}
@@ -30,7 +30,7 @@ const Experience = () => {
               </div>
             </section>
 
-            <span className="text-sm text-right w-44">
+            <span className="text-sm text-right w-56">
               {exp.startDate} - {exp.endDate}
             </span>
           </div>

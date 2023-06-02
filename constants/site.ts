@@ -8,7 +8,7 @@ export const info = {
     "Shubham Chopade, Shubham, Chopade, shubhamchopade, shubhamchopade, software developer",
   bio: "a software engineer based in New York experienced in building web applications, mobile applications and backend services.",
   siteLanguage: "en_US",
-  twitter: "https://twitter.com/chopadehsubham4",
+  twitter: "https://twitter.com/chopadeshubham4",
   github: "https://github.com/shubhamchopade",
   linkedin: "https://linkedin.com/in/shubham-chopade",
 };
@@ -24,7 +24,7 @@ export const education = [
     startDate: "August 2021",
     endDate: "May 2023",
     timelineDate: "May 2023",
-    note: "Completed graduation 🫶",
+    note: "Completed Masters in Computer Science",
     description:
       "Data Structures and Algorithms, Object Oriented Programming, Embedded Programming, Networking",
     link: "https://www.syracuse.edu/",
@@ -107,7 +107,7 @@ export const experience = [
 export const projects = [
   {
     type: "project",
-    title: "Reactly - Host your React App in 3 steps",
+    title: "Reactly",
     description:
       "Reactly is a CLI tool that helps you to host your React App in 3 steps. It is a simple and easy to use tool that helps you to host your React App on Github Pages, Netlify, and Vercel.",
     image: "/projects/decoderspace.png",
@@ -117,11 +117,11 @@ export const projects = [
     note: "Tried my hands on CLI tool development and orchestration.",
     link: "https://www.reactly.app/",
     github: "https://github.com/shubhamchopade/reactly",
-    techStack: ["React", "NodeJS", "Typescript", "Github Actions"],
+    techStack: ["NextJS", "Typescript", "ExpressJS", "Docker", "Postgres"],
   },
   {
     type: "project",
-    title: "Mutualism - Agent-based modeling for Yeast",
+    title: "Mutualism - Agent-based modeling",
     description:
       "Designed and developed a distributed systems-based simulator to study the behavior of Yeast in diverse environmental conditions, such as varying levels of Glucose and Lysine. This educational product is specifically aimed at teaching microbiology concepts to school-going children, providing an interactive and engaging learning experience.",
     image: "/projects/mutualismsimulator.png",
@@ -131,11 +131,11 @@ export const projects = [
     note: "Learned about agent-based modeling and distributed systems.",
     link: "https://www.mutualismsimulator.org/",
     github: "https://github.com/shubhamchopade/mutualisim_frontend",
-    techStack: ["React", "NodeJS", "Typescript", "Github Actions"],
+    techStack: ["React", "Python", "AWS", "Github Actions", "FastAPI"],
   },
   {
     type: "project",
-    title: "Decoder Space - Verilog Coding Practice",
+    title: "Decoder Space - Verilog",
     description:
       "The Digital Electronics Coder Space is a dedicated platform designed to help individuals practice and enhance their Verilog coding skills specifically for interviews. With a focus on digital electronics, users can access a range of resources and exercises to master Verilog coding techniques, preparing them for success in technical interviews.",
     image: "/projects/decoderspace.png",
@@ -144,11 +144,11 @@ export const projects = [
     timelineDate: "April 2023",
     note: "Building a platform to help people practice Verilog coding.",
     link: "https://www.decoderspace.com/",
-    techStack: ["React", "NodeJS", "Typescript", "Github Actions"],
+    techStack: ["Django", "Postgres", "AWS", "Verilog", "NextJS"],
   },
   {
     type: "project",
-    title: "The Book Pundits - Connecting Authors & Influencers",
+    title: "The Book Pundits",
     description:
       "Book Pundits is a Book Campaign Platform. Their motto is to connect Authors with their niche readers and reliable authentic influencers.",
     image: "/projects/thebookpundits.png",
@@ -157,7 +157,7 @@ export const projects = [
     timelineDate: "January 2021",
     note: "Built a platform to help authors connect with influencers.",
     link: "https://www.thebookpundits.com/",
-    techStack: ["React", "NodeJS", "Typescript", "Github Actions"],
+    techStack: ["React", "Firebase", "Tailwind CSS"],
   },
   {
     type: "project",
@@ -183,11 +183,11 @@ export const projects = [
     timelineDate: "April 2021",
     note: "Another version of Tailwind CSS Gradients.",
     link: "https://github.com/shubhamchopade/tailwind-gradient-v2",
-    techStack: ["React", "NodeJS", "Typescript", "Github Actions"],
+    techStack: ["React", "Styled Components", "Tailwind CSS", "Supabase"],
   },
   {
     type: "project",
-    title: "Techsapien - Opensource Tech Blog",
+    title: "Techsapien - Blog",
     description:
       "Techsapien is a tech blog where I write about the latest technologies and my experiences with them.",
     image: "/projects/techsapien.png",
@@ -197,7 +197,7 @@ export const projects = [
     note: "A tech blog where I write about the latest technologies.",
     link: "https://www.techsapien.dev/",
     github: "https://github.com/shubhamchopade/techsapien",
-    techStack: ["React", "NodeJS", "Typescript", "Github Actions"],
+    techStack: ["Gatsby", "MDX", "Tailwind CSS"],
   },
 ];
 

@@ -47,11 +47,11 @@ const Pomodoro = () => {
           <div className="flex items-center mx-4">
             <p>Pomodoro Timer</p>
             {/* Minutes */}
-            <h1 className="text-2xl font-bold mx-3 text-pink-700">
-              {Math.floor(seconds / 60)} :
+            <h1 className="text-xl font-bold text-pink-700">
+              {Math.floor(seconds / 60)}:
             </h1>
             {/* Seconds */}
-            <h1 className="text-2xl">
+            <h1 className="text-xl">
               {Math.round(seconds % 60) < 10 && "0"}
               {Math.round(seconds % 60)}
             </h1>

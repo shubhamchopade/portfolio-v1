@@ -2,17 +2,16 @@ import React from "react";
 
 import Image from "next/image";
 import { education } from "@/constants/site";
-import Timeline from "./timeline";
 
 const Education = () => {
   return (
-    <div className="mt-16 max-w-2xl mx-auto">
-      <p className="text-2xl my-8">Experience</p>
+    <div className="mt-16 max-w-2xl px-1 mx-auto">
+      <p className="text-2xl my-8">Education</p>
       {education.map((edu) => (
         <div className="flex items-start justify-between mx-2 my-8 group">
           <section className="flex">
             <Image
-              className="object-cover"
+              className="w-10 h-12 sm:w-8 sm:h-12 object-cover"
               alt="Organization Logo"
               width={40}
               height={40}
@@ -30,7 +29,7 @@ const Education = () => {
             </div>
           </section>
 
-          <span className="text-sm text-right w-44">
+          <span className="text-sm text-right w-52">
             {edu.startDate} - {edu.endDate}
           </span>
         </div>
@@ -40,59 +39,3 @@ const Education = () => {
 };
 
 export default Education;
-
-// {timeline.map((item) =>
-//   item.type === "education" ? (
-//     <div className="flex items-start justify-between mx-2 my-8 group">
-//       <section className="flex">
-//         <Image
-//           className="object-cover"
-//           alt="Organization Logo"
-//           width={40}
-//           height={40}
-//           src={item.logo}
-//         />
-//         <div className="ml-4">
-//           <a
-//             className="group-hover:text-blue-500"
-//             href={item.link}
-//             target="__blank"
-//           >
-//             {item.university}
-//           </a>
-//           <p className="text-sm mt-1">{item.program}</p>
-//         </div>
-//       </section>
-
-//       <span className="text-sm text-right w-44">
-//         {item.startDate} - {item.endDate}
-//       </span>
-//     </div>
-//   ) : (
-//     <div className="flex items-start justify-between mx-2 my-8 group">
-//       <section className="flex">
-//         <Image
-//           className="object-cover"
-//           alt="Organization Logo"
-//           width={40}
-//           height={40}
-//           src={item.logo}
-//         />
-//         <div className="ml-4">
-//           <a
-//             className="group-hover:text-blue-500"
-//             href={item.link}
-//             target="__blank"
-//           >
-//             {item.company}
-//           </a>
-//           <p className="text-sm mt-1">{item.title}</p>
-//         </div>
-//       </section>
-
-//       <span className="text-sm text-right w-44">
-//         {item.startDate} - {item.endDate}
-//       </span>
-//     </div>
-//   )
-// )}

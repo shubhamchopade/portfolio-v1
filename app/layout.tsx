@@ -15,6 +15,9 @@ export const metadata = {
   title: "Shubham Chopade",
   description:
     "Shubham is a software engineer based in New York. He a software engineer based in New York experienced in building web applications, mobile applications and backend services. He completed Masters degree in Computer Science from Syracuse University.",
+  images: [
+    { url: "https://shubhamchopade.com/banner.jpeg", width: 800, height: 600 },
+  ],
 };
 
 interface RootLayoutProps {
@@ -30,13 +33,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <script
           async
           src="https://analytics.umami.is/script.js"
-          data-website-id="66f042aa-ecb7-4ce8-bb2a-1e84afbd82bd"
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
         ></script>
-        <script
+        {/* <script
           async
           src="https://stats.minurl.app/shubham"
           data-website-id="feedd63e-21bd-45fb-a133-d751c919ed1b"
-        ></script>
+        ></script> */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Banner />
           <div className="">

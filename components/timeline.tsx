@@ -3,7 +3,7 @@ import { sortedTimeline } from "@/constants/site";
 
 const Timeline = () => {
   return (
-    <div className="mt-16 max-w-2xl mx-auto relative -z-10">
+    <div className="mb-24 mt-16 max-w-2xl mx-auto relative -z-10">
       <p className="text-2xl mb-8">Timeline</p>
       <div className="max-w-2xl ml-44">
         {sortedTimeline.map((item: any, index) => (
@@ -15,13 +15,14 @@ const Timeline = () => {
               <p className="-mt-4">__________________</p>
               {index != sortedTimeline.length - 1 && (
                 <>
-                  {" "}
                   <p className="-mt-2 opacity-25">_</p>
                   <p className="-mt-2 opacity-25">_</p>
                   <p className="-mt-2 opacity-25">_</p>
                   <p className="-mt-2 opacity-25">_</p>
                   <p className="-mt-2 opacity-25">_</p>
                   <p className="-mt-2 opacity-25">_</p>
+                  <p className="-mt-2 opacity-25">_</p>
+                  <p className="-mt-2 opacity-25 sm:hidden block">_</p>
                 </>
               )}
             </div>
