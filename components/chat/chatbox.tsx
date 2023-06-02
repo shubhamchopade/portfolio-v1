@@ -128,8 +128,12 @@ const Chatbox = () => {
 
   return (
     <div>
-      <div className="mt-8 max-w-sm mx-auto relative group">
-        <ScrollArea className="h-72 max-w-xl rounded-md border">
+      <div className="mt-8 max-w-sm mx-auto relative group px-2">
+        <ScrollArea
+          className={`${
+            messages.length > 0 ? "h-72" : "h-0"
+          } transition-transform duration-500 max-w-xl rounded-md border`}
+        >
           <div className="p-4">
             {messages.map((message: any) => (
               <div key={message.id} className="my-4">

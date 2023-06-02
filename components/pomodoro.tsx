@@ -35,7 +35,7 @@ const Pomodoro = () => {
   }, [start]);
 
   return (
-    <div className="flex items-center">
+    <div data-umami-event="pomodoro" className="flex items-center">
       <Icons.timer
         onClick={() => setShow(!show)}
         className={`cursor-pointer ml-4 ${
@@ -47,7 +47,7 @@ const Pomodoro = () => {
           <div className="flex items-center mx-4">
             <p>Pomodoro Timer</p>
             {/* Minutes */}
-            <h1 className="text-xl font-bold text-pink-700">
+            <h1 className="text-xl ml-1 font-bold text-pink-700">
               {Math.floor(seconds / 60)}:
             </h1>
             {/* Seconds */}

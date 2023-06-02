@@ -7,6 +7,7 @@ export function ModeToggle() {
 
   return (
     <button
+      data-umami-event="dark-mode-toggle"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       className="border rounded-md w-6 h-6 flex items-center justify-center"
     >

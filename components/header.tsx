@@ -3,9 +3,7 @@ import React, { useEffect } from "react";
 import { ModeToggle } from "./mode-toggle";
 import Link from "next/link";
 import { useWindowScroll } from "@/hooks/use-window-scroll";
-import { TimerIcon } from "./icons";
 import Pomodoro from "./pomodoro";
-import Socials from "./ui/socials";
 
 const Header = () => {
   const [scroll, scrollTo] = useWindowScroll();
