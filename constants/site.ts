@@ -11,6 +11,21 @@ export const info = {
   twitter: "https://twitter.com/chopadeshubham4",
   github: "https://github.com/shubhamchopade",
   linkedin: "https://linkedin.com/in/shubham-chopade",
+  metadata: {
+    og: {
+      title: "Shubham Chopade",
+      description: "Shubham Chopade's personal website",
+      image: "/og/open-graph-lg.png",
+      url: "https://shubhamchopade.com",
+    },
+    twitter: {
+      title: "Shubham Chopade",
+      description: "Shubham Chopade's personal website",
+      image: "/og/twitter-sm.png",
+      card: "/og/twitter-lg.png",
+      url: "https://shubhamchopade.com",
+    },
+  },
 };
 
 export const education = [

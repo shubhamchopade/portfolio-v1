@@ -6,19 +6,23 @@ import Pomodoro from "@/components/pomodoro";
 import Projects from "@/components/projects";
 import Timeline from "@/components/timeline";
 import Link from "next/link";
-import { metadata } from "./layout";
+import { info } from "@/constants/site";
 
 export default function Home() {
   return (
     <div className="">
-      <meta property="og:image" content="/banner.jpeg" />
-      <meta property="og:image:type" content="jpeg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="400" />
+      <meta property="og:image" content={info.metadata.og.image} />
+      <meta property="og:title" content={info.metadata.og.title} />
+      <meta property="og:description" content={info.metadata.og.description} />
+      <meta property="og:url" content={info.metadata.og.url} />
 
-      <meta property="og:title" content={metadata.title} />
-      <meta property="og:description" content={metadata.description} />
-      <meta property="og:url" content="https://shubhamchopade.com" />
+      <meta property="twitter:image" content={info.metadata.twitter.image} />
+      <meta property="twitter:card" content={info.metadata.twitter.card} />
+      <meta property="twitter:title" content={info.metadata.twitter.title} />
+      <meta
+        property="twitter:description"
+        content={info.metadata.twitter.description}
+      />
       <Landing />
       <Projects />
       <Education />
