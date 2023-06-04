@@ -2,6 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 import { projects } from "@/constants/site";
+import { Icons } from "./icons";
 
 const Projects = () => {
   return (
@@ -31,6 +32,11 @@ const Projects = () => {
                   {project.startDate} - {project.endDate}
                 </p>
                 <p className="text-sm max-w-xl mt-4">{project.description}</p>
+                {project.github && (
+                  <a href={project.github}>
+                    <Icons.github className="w-6 h-6 mt-4" />
+                  </a>
+                )}
                 <div className="flex">
                   {project.techStack.map((tech) => (
                     <span className="text-xs text-secondary-foreground bg-secondary-background rounded-full mr-2 mt-4">

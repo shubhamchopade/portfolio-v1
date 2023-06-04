@@ -6,7 +6,7 @@ export const info = {
   siteDescription: "Shubham Chopade's personal website",
   siteKeywords:
     "Shubham Chopade, Shubham, Chopade, shubhamchopade, shubhamchopade, software developer",
-  bio: "a software engineer based in New York experienced in building web applications, mobile applications and backend services.",
+  bio: "A software engineer based in New York experienced in building web applications, mobile applications and backend services.",
   siteLanguage: "en_US",
   twitter: "https://twitter.com/chopadeshubham4",
   github: "https://github.com/shubhamchopade",
@@ -180,7 +180,7 @@ export const projects = [
     endDate: "October 2020",
     timelineDate: "October 2020",
     note: "You can use these gradients in your Tailwind CSS projects",
-    link: "https://github.com/shubhamchopade/tailwind-gradient",
+    github: "https://github.com/shubhamchopade/tailwind-gradient",
     techStack: ["React", "NodeJS", "Typescript", "Github Actions"],
   },
   {
@@ -193,7 +193,7 @@ export const projects = [
     endDate: "April 2021",
     timelineDate: "April 2021",
     note: "Another version of Tailwind CSS Gradients.",
-    link: "https://github.com/shubhamchopade/tailwind-gradient-v2",
+    github: "https://github.com/shubhamchopade/tailwind-gradient-v2",
     techStack: ["React", "Styled Components", "Tailwind CSS", "Supabase"],
   },
   {
@@ -206,7 +206,6 @@ export const projects = [
     endDate: "September 2020",
     timelineDate: "September 2020",
     note: "A tech blog where I write about the latest technologies.",
-    link: "https://www.techsapien.dev/",
     github: "https://github.com/shubhamchopade/techsapien",
     techStack: ["Gatsby", "MDX", "Tailwind CSS"],
   },
