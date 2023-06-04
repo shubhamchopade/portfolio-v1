@@ -23,10 +23,6 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <meta property="og:image" content="/banner.jpeg" />
-      <meta property="og:image:type" content="jpeg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="400" />
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
