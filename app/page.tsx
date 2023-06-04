@@ -13,16 +13,13 @@ export default function Home() {
     <div className="">
       <meta property="og:image" content={info.metadata.og.image} />
       <meta property="og:title" content={info.metadata.og.title} />
-      <meta property="og:description" content={info.metadata.og.description} />
+      <meta property="og:description" content={info.bio} />
       <meta property="og:url" content={info.metadata.og.url} />
 
       <meta property="twitter:image" content={info.metadata.twitter.image} />
       <meta property="twitter:card" content={info.metadata.twitter.card} />
       <meta property="twitter:title" content={info.metadata.twitter.title} />
-      <meta
-        property="twitter:description"
-        content={info.metadata.twitter.description}
-      />
+      <meta property="twitter:description" content={info.bio} />
       <Landing />
       <Projects />
       <Education />
