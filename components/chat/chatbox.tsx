@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { FormEventHandler, useEffect, useRef, useState } from "react";
 
 import { info } from "@/constants/site";
 import { useToast } from "../ui/use-toast";
@@ -24,7 +24,9 @@ const Chatbox = () => {
   );
   const [userMessages, setUserMessages] = useState([]);
   const [chatId, setChatId] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const ref = useRef(null);
 
   useEffect(() => {
     const chatId = localStorage.getItem("chat_sc");
@@ -32,6 +34,17 @@ const Chatbox = () => {
       setChatId(chatId);
     }
   }, [userMessages]);
+
+  useEffect(() => {
+    if (ref?.current) {
+      // @ts-ignore
+      ref?.current.scrollTo({
+        // @ts-ignore
+        top: ref?.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  }, [messages]);
 
   const { data, mutate } = useSWR(
     chatId ? `/api/chat?block_id=${chatId}` : null,
@@ -68,12 +81,16 @@ const Chatbox = () => {
   }, []);
 
   //   Conditionally render chatbox
-  const handleSendMessage = async () => {
+  const handleSendMessage = async (e: any) => {
+    e.preventDefault();
+    setIsLoading(true);
     const chatId = localStorage.getItem("chat_sc");
     if (!chatId) {
       await createSession();
+      setIsLoading(false);
     } else {
       await sendMessage(chatId);
+      setIsLoading(false);
     }
   };
 
@@ -130,6 +147,7 @@ const Chatbox = () => {
     <div>
       <div className="mt-8 max-w-sm mx-auto relative group px-2">
         <ScrollArea
+          ref={ref}
           className={`${
             messages.length > 0 ? "h-72" : "h-0"
           } transition-transform duration-500 max-w-xl rounded-md border`}
@@ -163,25 +181,34 @@ const Chatbox = () => {
           </div>
         </ScrollArea>
 
-        <div className="flex mt-4">
-          <Input
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            className=""
-            name="note"
-            placeholder={`Hi ${info.name.split(" ")[0]}, this is ...`}
-          />
-          <Button
-            data-umami-event="send-message"
-            disabled={content.length === 0}
-            className="ml-4"
-            onClick={handleSendMessage}
-          >
-            Send{" "}
-            <Icons.send className="w-4 h-4 ml-4 transition-transform group-hover:rotate-45" />
-          </Button>
-        </div>
-        <p className="absolute -bottom-16 sm:-left-40 -left-16 rotate-3 font-serif transition-transform group-hover:text-pink-500 group-hover:rotate-12">
+        <form onSubmit={handleSendMessage}>
+          <div className="flex mt-4">
+            <Input
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              className=""
+              name="note"
+              placeholder={`Hi ${info.name.split(" ")[0]}, this is ...`}
+            />
+            <Button
+              data-umami-event="send-message"
+              disabled={content.length === 0 || isLoading}
+              className={`ml-4 `}
+            >
+              Send{" "}
+              {isLoading ? (
+                <Icons.loader className="w-4 h-4 ml-4 animate-spin" />
+              ) : (
+                <Icons.send className="w-4 h-4 ml-4 transition-transform group-hover:rotate-45" />
+              )}
+            </Button>
+          </div>
+        </form>
+
+        <p className="text-xs uppercase text-left mt-2 opacity-50">
+          Powered by notion
+        </p>
+        <p className="absolute sm:-bottom-16 sm:-left-40 -bottom-10 left-4 sm:rotate-3 font-serif transition-transform opacity-50 group-hover:text-pink-500 group-hover:opacity-100 sm:group-hover:rotate-12">
           Send me a direct message
         </p>
       </div>

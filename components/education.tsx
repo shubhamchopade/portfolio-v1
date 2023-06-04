@@ -11,7 +11,7 @@ const Education = () => {
         <div className="flex items-start justify-between mx-2 my-8 group">
           <section className="flex">
             <Image
-              className="w-10 h-12 sm:w-8 sm:h-12 object-cover"
+              className="w-10 h-14 object-cover"
               alt="Organization Logo"
               width={40}
               height={40}

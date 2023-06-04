@@ -38,7 +38,7 @@ const Header = () => {
 
         {/* init */}
         <div
-          className={`fixed z-40 inset-x-0 bottom-8 flex items-center justify-between bg-white rounded-full bg-opacity-10 backdrop-blur-sm transition-transform ${
+          className={`fixed z-40 inset-x-0 bottom-8 flex items-center justify-between bg-white rounded-full bg-opacity-10 backdrop-blur-xl transition-transform ${
             isScrolled ? "max-w-xs" : "w-40 hidden"
           } mx-auto px-8 py-4 `}
         >

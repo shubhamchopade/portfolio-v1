@@ -14,6 +14,8 @@ export const metadata = {
   images: [{ url: "/banner.jpeg", width: 800, height: 600 }],
 };
 
+const isDevelopment = process.env.NODE_ENV === "development";
+
 interface RootLayoutProps {
   children: React.ReactNode;
 }
@@ -21,14 +23,20 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+      <meta property="og:image" content="/banner.jpeg" />
+      <meta property="og:image:type" content="jpeg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="400" />
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
-        <script
-          async
-          src={process.env.NEXT_PUBLIC_UMAMI_URL}
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-        ></script>
+        {!isDevelopment && (
+          <script
+            async
+            src={process.env.NEXT_PUBLIC_UMAMI_URL}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+          ></script>
+        )}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Banner />
           <div className="">

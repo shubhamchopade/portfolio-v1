@@ -107,15 +107,14 @@ export const experience = [
 export const projects = [
   {
     type: "project",
-    title: "Reactly",
+    title: "Reactly (Work in progress)",
     description:
-      "Reactly is a CLI tool that helps you to host your React App in 3 steps. It is a simple and easy to use tool that helps you to host your React App on Github Pages, Netlify, and Vercel.",
-    image: "/projects/decoderspace.png",
+      "Reactly is a CLI tool along with a web interface that helps you host your React App in 3 steps. It is a simple and easy to use tool that helps you to host your React App on Github Pages, Netlify, and Vercel.",
+    image: "/projects/reactly.png",
     startDate: "March 2023",
     endDate: "current",
     timelineDate: "May 2023",
     note: "Tried my hands on CLI tool development and orchestration.",
-    link: "https://www.reactly.app/",
     github: "https://github.com/shubhamchopade/reactly",
     techStack: ["NextJS", "Typescript", "ExpressJS", "Docker", "Postgres"],
   },
@@ -156,7 +155,6 @@ export const projects = [
     endDate: "January 2021",
     timelineDate: "January 2021",
     note: "Built a platform to help authors connect with influencers.",
-    link: "https://www.thebookpundits.com/",
     techStack: ["React", "Firebase", "Tailwind CSS"],
   },
   {
@@ -164,7 +162,7 @@ export const projects = [
     title: "Tailwind CSS Gradients",
     description:
       "A collection of 180+ gradients for Tailwind CSS. The gradients are generated using the Tailwind CSS color palette.",
-    image: "/projects/tailwind-v2.png",
+    image: "/projects/tailwind-gradient.png",
     startDate: "May 2020",
     endDate: "October 2020",
     timelineDate: "October 2020",

@@ -20,6 +20,7 @@ const Projects = () => {
               />
               <div className="sm:ml-4 sm:mt-0 mt-4">
                 <a
+                  data-umami-event={project.title}
                   className="group-hover:text-blue-500 font-bold text-xl"
                   href={project.link}
                   target="__blank"

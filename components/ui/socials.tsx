@@ -6,13 +6,25 @@ import { info } from "@/constants/site";
 const Socials = () => {
   return (
     <div className="flex items-center justify-center max-w-xs mx-auto mt-4">
-      <a className="ml-6 w-4 h-4" href={info.linkedin}>
+      <a
+        data-umami-event="social-linkedin"
+        className="ml-6 w-4 h-4"
+        href={info.linkedin}
+      >
         <Icons.linkedin className="h-5 w-5" />
       </a>
-      <a className="ml-6 w-4 h-4" href={info.github}>
+      <a
+        data-umami-event="social-github"
+        className="ml-6 w-4 h-4"
+        href={info.github}
+      >
         <Icons.github />
       </a>
-      <a className="ml-6 w-4 h-4" href={info.twitter}>
+      <a
+        data-umami-event="social-twitter"
+        className="ml-6 w-4 h-4"
+        href={info.twitter}
+      >
         <Icons.twitter />
       </a>
       {/* <Button variant={"outline"} className="ml-6 ">
