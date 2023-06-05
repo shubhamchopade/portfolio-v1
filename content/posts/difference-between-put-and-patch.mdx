@@ -1,0 +1,66 @@
+---
+title: Difference Between PUT and PATCH in RESTful APIs
+description: The difference between the PUT and PATCH methods in RESTful APIs, providing examples and guidance on when to use each method for updating resources.
+date: "2023-05-20"
+ogImage: "/posts/og_sorting-array-of-objects.png"
+---
+
+**Introduction:**
+When designing RESTful APIs, two common HTTP methods used for updating resources are PUT and PATCH. While both methods serve a similar purpose, there are key differences that developers must understand to choose the appropriate method for their specific use case. This blog post aims to clarify the distinction between PUT and PATCH and provide guidance on when to use each method.
+
+**PUT Method:**
+The PUT method is used to completely replace an existing resource with a new representation provided in the request. It requires the client to send a complete representation of the resource, including all the fields, even those that are not being updated. The server then replaces the existing resource with the new representation.
+
+**Example code block using PUT in a RESTful API:**
+
+```http
+PUT /api/users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "age": 30
+}
+```
+
+In this example, the entire user resource is sent in the request body, including the fields that are not being updated. The server replaces the existing user with the new representation provided.
+
+**PATCH Method:**
+On the other hand, the PATCH method is used to make partial updates to a resource. It allows clients to send only the fields that need to be updated, without requiring the complete representation of the resource. The server then applies the provided changes to the existing resource.
+
+**Example code block using PATCH in a RESTful API:**
+
+```http
+PATCH /api/users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json-patch+json
+
+[
+    { "op": "replace", "path": "/name", "value": "Jane Doe" },
+    { "op": "add", "path": "/address", "value": "123 Street" }
+]
+```
+
+In this example, the PATCH request includes an array of operations to be performed on the user resource. The "replace" operation updates the "name" field, while the "add" operation adds a new "address" field.
+
+**Choosing Between PUT and PATCH:**
+Now that we understand the differences between PUT and PATCH, let's discuss when to use each method.
+
+Use PUT when:
+
+1. You have a complete representation of the resource.
+2. You want to replace the entire resource with the new representation.
+3. The client has all the necessary data to send a complete representation.
+
+Use PATCH when:
+
+1. You want to make partial updates to a resource.
+2. You don't have a complete representation of the resource or want to send only the modified fields.
+3. The client wants to update specific fields without affecting the rest of the resource.
+
+**Conclusion:**
+In summary, PUT is used for complete replacements of resources, while PATCH is suitable for partial updates. Choosing the appropriate method depends on the specific requirements of your application. Understanding the differences between PUT and PATCH enables developers to design RESTful APIs that follow best practices and provide efficient and effective resource updates.
+
+Remember, consistency in API design is crucial, so it's important to document and communicate the chosen method to API consumers to ensure smooth integration with your application.
