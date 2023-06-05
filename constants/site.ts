@@ -22,6 +22,7 @@ export const info = {
       image: "/og/twitter-sm.png",
       card: "/og/twitter-lg.png",
       url: "https://shubhamchopade.com",
+      creator: "@chopadeshubham4",
     },
   },
 };
