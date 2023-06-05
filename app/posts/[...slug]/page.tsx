@@ -59,10 +59,11 @@ export default async function PostPage({ params }: PostProps) {
 
   return (
     <article className="mb-12 prose dark:prose-invert">
-      <meta property="og:image" content="/blog-post-1.jpg" />
-      <meta property="og:image:type" content="jpeg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="400" />
+      <meta property="og:image" content={post.ogImage} />
+      <meta property="og:title" content={post.title} />
+      <meta property="twitter:image" content={post.ogImage} />
+      <meta property="twitter:card" content={post.ogImage} />
+
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
         <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">
