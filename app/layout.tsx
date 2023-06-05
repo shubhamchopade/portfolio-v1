@@ -7,13 +7,6 @@ import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Shubham Chopade",
-  description:
-    "Shubham is a software engineer based in New York. He a software engineer based in New York experienced in building web applications, mobile applications and backend services. He completed Masters degree in Computer Science from Syracuse University.",
-  images: [{ url: "/banner.jpeg", width: 800, height: 600 }],
-};
-
 const isDevelopment = process.env.NODE_ENV === "development";
 
 interface RootLayoutProps {

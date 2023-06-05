@@ -14,7 +14,7 @@ const Landing = () => {
         </h1>
 
         <h2 className="text-2xl mt-2">{info.title}</h2>
-        <p className="text-base mt-4 max-w-lg px-4  mx-auto">{info.bio}</p>
+        <p className="text-base mt-4 max-w-lg  mx-auto">{info.bio}</p>
         <Socials />
         <Chatbox />
       </div>

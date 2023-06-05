@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 import { Icons } from "../icons";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import useSWR from "swr";
+import useSound from "use-sound";
 
 // @ts-ignore
 const fetcher = (...args: any[]) => fetch(...args).then((res) => res.json());
@@ -26,6 +27,7 @@ const Chatbox = () => {
   const [chatId, setChatId] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const [play] = useSound("/sounds/pop.mp3", { volume: 0.5 });
   const ref = useRef(null);
 
   useEffect(() => {
@@ -67,6 +69,10 @@ const Chatbox = () => {
       setMessages(_messages);
     }
   }, [data]);
+
+  useEffect(() => {
+    data?.results?.length > messages?.length && play();
+  }, [messages, data]);
 
   // create unique uuid for each user using Math random and Date.now
   useEffect(() => {
@@ -188,7 +194,7 @@ const Chatbox = () => {
               onChange={(e) => setContent(e.target.value)}
               className=""
               name="note"
-              placeholder={`Hi ${info.name.split(" ")[0]}, this is ...`}
+              placeholder={`start typing...`}
             />
             <Button
               data-umami-event="send-message"
@@ -208,7 +214,7 @@ const Chatbox = () => {
         <p className="text-xs uppercase text-left mt-2 opacity-50">
           Powered by notion
         </p>
-        <p className="absolute sm:-bottom-16 sm:-left-40 -bottom-10 left-4 sm:rotate-3 font-serif transition-transform opacity-50 group-hover:text-pink-500 group-hover:opacity-100 sm:group-hover:rotate-12">
+        <p className="absolute sm:-bottom-16 opacity-0 sm:-left-40 -bottom-10 left-4 sm:rotate-3 font-serif transition-transform group-hover:text-pink-500 group-hover:opacity-100 sm:group-hover:rotate-12">
           Send me a direct message
         </p>
       </div>
