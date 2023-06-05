@@ -33,9 +33,9 @@ const Umami = (props: Props) => {
   }, []);
 
   return (
-    <div className="sm:fixed flex items-center left-40">
+    <div className="flex items-center left-40">
       <Icons.eye className="h-4 w-4" />
-      <span className="ml-2">{views}</span>
+      <span className="ml-2">{views} total views</span>
     </div>
   );
 };

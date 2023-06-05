@@ -169,6 +169,7 @@ export const projects = [
     endDate: "January 2021",
     timelineDate: "January 2021",
     note: "Built a platform to help authors connect with influencers.",
+    link: "https://thebookpundits.com/",
     techStack: ["React", "Firebase", "Tailwind CSS"],
   },
   {

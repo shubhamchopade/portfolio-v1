@@ -14,6 +14,7 @@ import {
   SunIcon,
   TwitterIcon,
   Loader2,
+  BookCopyIcon,
 } from "lucide-react";
 
 export const TimerIcon = (props: any) => (
@@ -73,4 +74,5 @@ export const Icons = {
   sun: SunIcon,
   eye: EyeIcon,
   loader: Loader2,
+  book: BookCopyIcon,
 };

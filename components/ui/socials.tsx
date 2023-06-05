@@ -8,7 +8,7 @@ const Socials = () => {
     <div className="flex items-center justify-center max-w-xs mx-auto mt-4">
       <a
         data-umami-event="social-linkedin"
-        className="ml-6 w-4 h-4"
+        className="mt-1 ml-6 w-4 h-4"
         href={info.linkedin}
       >
         <Icons.linkedin className="h-5 w-5" />
@@ -27,12 +27,12 @@ const Socials = () => {
       >
         <Icons.twitter />
       </a>
-      {/* <Button variant={"outline"} className="ml-6 ">
+      <a className="" href="/ShubhamChopade_Resume-05-22-2023.pdf">
         <Icons.download
           data-umami-event="resume-download"
-          className="h-4 w-4"
+          className="ml-6 mt-1 h-6 w-6"
         />
-      </Button> */}
+      </a>
     </div>
   );
 };
