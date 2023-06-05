@@ -4,6 +4,7 @@ import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
 import { Mdx } from "@/components/mdx-components";
 import Umami from "@/components/tracking/umami";
+import { info } from "@/constants/site";
 
 interface PostProps {
   params: {
@@ -34,6 +35,35 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
+    openGraph: {
+      type: "website",
+      url: post.ogImage,
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: post.ogImage,
+          width: 526,
+          height: 275,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: info.metadata.twitter.url,
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: post.ogImage,
+          width: 526,
+          height: 275,
+          alt: post.title,
+        },
+      ],
+      creator: info.metadata.twitter.creator,
+    },
   };
 }
 

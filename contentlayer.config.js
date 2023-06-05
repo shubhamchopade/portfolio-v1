@@ -46,6 +46,7 @@ export const Post = defineDocumentType(() => ({
     },
     ogImage: {
       type: "string",
+      required: true,
     }
   },
   computedFields,
