@@ -1,0 +1,110 @@
+---
+title: Timezone converter with Next.js and luxon
+description: A simple timezone app that shows the time in different timezones as meta image when shared on social media platforms
+date: "2023-06-12"
+ogImage: "/posts/og_timezone-converter.png"
+---
+
+Access it live here [https://time.shubhamchopade.com/23/40/est/ist ](https://time.shubhamchopade.com/23/40/est/ist)
+
+If you want to show the time as 10:00 AM New York, USA, you would use the following [URL](https://time.shubhamchopade.com/23/40/est):
+
+```
+/10/00/est
+```
+
+If you want to show the time as 10:00 AM New York, USA, and target time as Mumbai, India you would use the following [URL](https://time.shubhamchopade.com/23/40/est/ist):
+
+```
+/10/00/est/ist
+```
+
+<a href="https://time.shubhamchopade.com/23/40/est/ist">
+  <Image
+    src="/posts/timezone-converter-target.png"
+    alt="Timezone converter"
+    width={600}
+    height={300}
+    layout="responsive"
+    priority
+  />
+</a>
+## Why?
+
+Whenever I wanted to share my time with someone from different timezone, I always had to google and still someone of us would not show up on the meeting because of the confusion in the timezones.
+So I thought of building a simple app that would show the time in different timezones as meta image when shared on social media platforms.
+
+<div>
+
+<Image
+  src="/posts/timezone-converter-imessage.png"
+  alt="Timezone converter"
+  width={600}
+  height={300}
+  layout="responsive"
+  priority
+/>
+
+<Image
+  src="/posts/timezone-converter-whatsapp.png"
+  alt="Timezone converter"
+  width={600}
+  height={300}
+  layout="responsive"
+  priority
+/>
+
+</div>
+
+This is how it looks
+when I send it to someone on iMessage and Whatsapp. It is very clear that I will be calling at
+their 8:10 PM.
+
+## Tech Stack
+
+- Next.js 13 App router
+- Vercel edge functions
+- Luxon (moment.js)
+
+## Meta images
+
+### What are meta images?
+
+Meta images are the images that are shown when you share a link on social media platforms like Twitter, Facebook, LinkedIn, etc. These images are generated dynamically based on the content of the page.
+
+### Initial Approach for generating dynamic meta images
+
+For every request, create a new canvas, draw the image, and return the image as a buffer. This approach is not scalable as it will create a new canvas for every request. Additionally, I also needed to store the generated images in a CDN for caching.
+
+### Next.js 13 App router Approach
+
+The savior Next.js provides a way to generate meta images using the `opengraph-image.tsx` file.
+This file is used to generate meta images for the pages.
+The `opengraph-image.tsx` file is a React component that is used to generate the meta images.
+It makes the use of Vercel edge functions to compute and cache the meta images on the fly.
+
+### Limitations of Vercel edge functions
+
+The Vercel edge functions have a size limit of 1MB for the free plan.
+
+```
+Error: The Edge Function "[hours]/[minutes]/[timezone]/[target]/opengraph-image" size is 1.03 MB and your plan size limit is 1 MB. Learn More: https://vercel.link/edge-function-size
+NOW_SANDBOX_WORKER_MAX_MIDDLEWARE_SIZE: The Edge Function "[hours]/[minutes]/[timezone]/[target]/opengraph-image" size is 1.03 MB and your plan size limit is 1 MB.
+```
+
+## Dates and Timezones
+
+### Issues faced while using the native Date object
+
+When it comes to handling dates, times, and timezones in JavaScript, the native Date class can be quite challenging to work with. Its API is not very intuitive, and dealing with timezones can quickly become a complex and error-prone task. That's where external libraries like Luxon come to the rescue.
+
+### Why luxon?
+
+Luxon is a powerful and user-friendly library for date and time manipulation in JavaScript.
+It was created with the goal of providing a simpler and more consistent API for working with dates and times, particularly when dealing with timezones.
+
+## Conclusion
+
+I was able to build this project over the weekend. I learned a lot about Next.js 13 and Vercel edge functions. I also learned about the luxon library and how it can be used to handle dates and timezones in JavaScript.
+
+I hope you enjoyed reading this article. If you have any questions or feedback, please feel free to reach out to me on [Twitter](https://twitter.com/chopadeshubham4).
