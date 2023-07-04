@@ -105,16 +105,16 @@ export const experience = [
   },
   {
     type: "experience",
-    title: "Fullstack Developer",
-    company: "Freelancer - Self Employed",
-    logo: "/techsapien-logo.jpeg",
+    title: "Software Engineer",
+    company: "Paveway Automation",
+    logo: "/paveway-logo.jpeg",
     location: "Pune, India",
-    startDate: "March 2019",
+    startDate: "June 2019",
     endDate: "July 2021",
-    timelineDate: "March 2019",
-    note: "Delivered my first freelance project",
+    timelineDate: "June 2019",
+    note: "First job as a Software Engineer",
     description:
-      "Project Delivery: Successfully delivered projects for remote clients in three different countries, demonstrating strong project management skills and ability to collaborate effectively across borders. Microservices Development: Leveraged NodeJS to architect and develop scalable microservices, enabling the creation of distributed systems that can be independently deployed, managed, and scaled. Utilized this technology to enhance efficiency and facilitate seamless integration within complex software architectures.",
+      "Project Delivery: Worked with a team of experienced developers to design and develop software solutions for clients in various automobile automation industries",
   },
 ];
 

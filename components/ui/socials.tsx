@@ -30,7 +30,7 @@ const Socials = () => {
       <a
         className=""
         data-umami-event="resume-download"
-        href="/ShubhamChopade_Resume-05-22-2023.pdf"
+        href="/ShubhamChopade_Resume-07-04-2023.pdf"
       >
         <Icons.download className="ml-6 mt-1 h-6 w-6" />
       </a>
