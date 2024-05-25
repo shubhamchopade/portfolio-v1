@@ -10,7 +10,7 @@ import { info } from "@/constants/site";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="ghb">
       <Landing />
       <Projects />
       <Education />
