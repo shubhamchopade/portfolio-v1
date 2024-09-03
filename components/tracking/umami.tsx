@@ -41,7 +41,6 @@ const Umami = (props: Props) => {
 
     const dataActive = await resActive.json();
     setActive(dataActive[0].x);
-    console.log(dataActive);
   };
 
   React.useEffect(() => {

@@ -63,17 +63,17 @@ export const education = [
 export const experience = [
   {
     type: "experience",
-    title: "Full Stack Engineer",
-    company: "Syracuse University",
-    logo: "/syracuse-logo.png",
-    location: "Syracuse, NY",
-    startDate: "August 2022",
-    endDate: "May 2023",
-    timelineDate: "May 2023",
+    title: "Software Engineer",
+    company: "Kinimatic (RoadOne IntermodaLogistics)",
+    logo: "/kinimatic-logo.png",
+    location: "Boston, NY",
+    startDate: "August 2023",
+    endDate: "current",
+    timelineDate: "August 2023",
     note: "Started working as a Full Stack Engineer",
     description:
-      "Python Backend, REST API: Deployed a high-performance REST API server using FastAPI for executing CPU-intensive operations. Implemented a messaging queue for efficient scheduling and handling of real-time EventSource requests, enabling the server to effectively manage and respond to up to 1000 concurrent connections. AWS, Nginx: Setup the architecture to be served by Amazon EC2 behind an Nginx proxy server, and the load balancer is used to manage HTTPS encrypted traffic.",
-    link: "https://www.syracuse.edu/",
+      "Being an early engineer, I was responsible for building the core product from scratch. I worked on the frontend using React and Next.js and the backend using Node.js and Express. I also worked on the database schema design and implementation using Postgres. I also worked on the CI/CD pipeline using Github Actions and Docker. I also worked on the deployment of the application on AWS.",
+    link: "https://www.kinimatic.com",
   },
   {
     type: "experience",
@@ -121,12 +121,12 @@ export const experience = [
 export const projects = [
   {
     type: "project",
-    title: "Reactly (Work in progress)",
+    title: "Reactly",
     description:
       "Reactly is a CLI tool along with a web interface that helps you host your React App in 3 steps. It is a simple and easy to use tool that helps you to host your React App on Github Pages, Netlify, and Vercel.",
     image: "/projects/reactly.png",
     startDate: "March 2023",
-    endDate: "current",
+    endDate: "May 2023",
     timelineDate: "May 2023",
     note: "Tried my hands on CLI tool development and orchestration.",
     github: "https://github.com/shubhamchopade/reactly",
@@ -142,7 +142,6 @@ export const projects = [
     endDate: "May 2023",
     timelineDate: "September 2022",
     note: "Learned about agent-based modeling and distributed systems.",
-    link: "https://www.mutualismsimulator.org/",
     github: "https://github.com/shubhamchopade/mutualisim_frontend",
     techStack: ["React", "Python", "AWS", "Github Actions", "FastAPI"],
   },
